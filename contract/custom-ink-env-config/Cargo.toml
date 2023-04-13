@@ -1,0 +1,14 @@
+[package]
+name = "ink-env-config"
+version = "0.0.0"
+authors = ["[your_name] <[your_email]>"]
+edition = "2018"
+resolver = "2"
+
+[lib]
+name = "ink_env_config"
+path = "lib.rs"
+crate-type = [
+	# Used for normal contract Wasm blobs.
+	"rlib",
+]

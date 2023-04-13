@@ -1,0 +1,17 @@
+[package]
+name = "ink_env"
+version = "0.1.0"
+authors = ["[your_name] <[your_email]>"]
+edition = "2018"
+resolver = "2"
+
+[dependencies]
+ink-env-config = { git = "https://github.com/xgreenx/ink-env-config.git" }
+
+[lib]
+name = "ink_env"
+path = "lib.rs"
+crate-type = [
+	# Used for normal contract Wasm blobs.
+	"rlib",
+]

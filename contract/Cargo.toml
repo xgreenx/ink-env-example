@@ -1,0 +1,24 @@
+[package]
+name = "contract"
+version = "0.1.0"
+authors = ["[your_name] <[your_email]>"]
+edition = "2018"
+resolver = "2"
+
+[dependencies]
+ink_env = { path = "../ink_env" }
+
+[lib]
+name = "contract"
+path = "lib.rs"
+crate-type = [
+	# Used for normal contract Wasm blobs.
+	"rlib",
+]
+
+[patch."https://github.com/xgreenx/ink-env-config.git"]
+ink-env-config = { path = "custom-ink-env-config" }
+
+# If the crate is published on the `crates.io` we can use the following syntax:
+# [patch.crates-io]
+# ink_env_config = { path = "custom_ink_env_config" }
